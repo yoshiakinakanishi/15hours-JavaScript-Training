@@ -1,0 +1,183 @@
+@size: 40px;
+@width: 600px;
+
+.checkbox-check() {
+	font-size: (@size * 1.4);
+	color: green;
+	position: absolute;
+	top: -(@size * 0.35);
+	left: -(@size * 1.45);
+	content: '✔';
+	display: block;
+}
+
+.checkbox-box() {
+	position: absolute;
+	width: (@size * 0.75);
+	height: (@size * 0.75);
+	top: (@size * 0.05);
+	left: -(@size * 1.4);
+	content: '';
+	border: (@size * 0.08) solid lightgray;
+	display:block;
+}
+
+.item-base() {
+	border: 1px solid lightgrey;
+	margin: 0;
+	padding: (@size * 0.4) (@size * 0.2) (@size * 0.4) (@size * 2.0);
+	height: @size;
+	font-size: @size;
+	box-shadow: (@size * 0.08) (@size * 0.08) (@size * 0.2) lightgray;
+	background: whitesmoke;
+}
+
+.item-dark() {
+	.item-base;
+	border-color: #222;
+	color: lightgrey;
+	background: #333;
+	background: linear-gradient(to bottom, #444, #222);
+	background: -moz-linear-gradient(top, #444, #222);
+	background: -webkit-linear-gradient(top, #444, #222);
+}
+
+body {
+	margin: auto;
+	width: @width;
+	padding-top: 10px;
+}
+
+header {
+	.item-dark;
+	border-radius: (@size * 0.2) (@size * 0.2) 0 0;
+
+	h1 {
+		font-size: 100%;
+		margin: 0;
+	}
+}
+
+.new-todo {
+	.item-base;
+}
+
+.todo-title {
+	height: @size;
+	font-size: @size;
+	outline: 0;
+	border: none;
+	background: transparent;
+
+	&::-moz-placeholder {
+		color: lightgray;
+	}
+	&::-webkit-input-placeholder {
+		color: lightgray;
+	}
+}
+
+.todos {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.todo {
+	.item-base;
+
+	&-done label {
+		color: darkgrey;
+	}
+
+	input[type=checkbox] {
+		display: none;
+
+		+ label {
+			position: relative;
+		}
+
+		+ label:before {
+			.checkbox-box;
+		}
+
+		+ label:after {
+			.checkbox-check;
+			opacity: 0;
+		}
+
+		&:checked + label:after {
+			opacity: 1;
+		}
+	}
+
+	&-operation {
+		float: right;
+
+		button {
+			font-size: @size * 0.8;
+			background: transparent;
+			border: none;
+			outline: none;
+			color: lightgrey;
+			width: @size * 0.8;
+			height: @size * 0.8;
+			padding: 0;
+			border-radius: @size * 0.1;
+		}
+
+		&-edit:hover {
+			color: darkblue;
+		}
+
+		&-delete:hover {
+			color: darkred;
+		}
+	}
+}
+
+footer {
+	.item-dark;
+	font-size: (@size * 0.5);
+	padding: 0 0 (@size * 0.4);
+	border-radius: 0 0 (@size * 0.2) (@size * 0.2);
+	text-align: right;
+	color: darkgray;
+
+	.filter {
+		margin: 0;
+		padding: 0;
+
+		&-selected {
+			color: lightgrey;
+			font-weight: bold;
+		}
+
+		li {
+			display: inline-block;
+			padding: (@size * 0.4);
+
+			&:hover {
+				color: whitesmoke;
+			}
+		}
+	}
+
+	address {
+		margin-top: (@size * 0.4);
+		margin-right: (@size * 0.2);
+	}
+}
+
+address {
+	font-size: (@size * 0.4);
+}
+
+[contenteditable="true"] {
+	outline: none;
+	border: 1px solid grey;
+	background: white;
+	box-shadow: 0 0 10px lightgrey inset;
+	display: inline-block;
+	width: calc(~"100% - ("@size~" * 2)");
+}

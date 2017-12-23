@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="jp">
+	<meta charset="UTF-8">
+	<title>Tiny Todo List</title>
+	<link rel="stylesheet" href="css/todolist.css">
+</head>
+<body>
+<header>
+	<h1>Tiny Todo List</h1>
+</header>
+<div class="new-todo">
+	<input type="text" placeholder="What should have been done?">
+</div>
+<div class="todo-list">
+	<ul class="todos">
+		<li class="todo todo-done" id="todo-1">
+			<input id="todo-1-checkbox" type="checkbox" checked="checked">
+			<label for="todo-1-checkbox">予定1</label>
+			<div class="todo-operation">
+				<button value="edit" class="todo-operation-edit">✎</button>
+				<button value="delete" class="todo-operation-delete">×</button>
+			</div>
+		</li>
+		<li class="todo" id="todo-2">
+			<input id="todo-2-checkbox" type="checkbox">
+			<label for="todo-2-checkbox">予定2</label>
+			<div class="todo-operation">
+				<button value="edit" class="todo-operation-edit">✎</button>
+				<button value="delete" class="todo-operation-delete">×</button>
+			</div>
+		</li>
+	</ul>
+</div>
+<footer>
+	<address>Copyright &copy; 2016 Your name.</address>
+</footer>
+</body>
+</html>

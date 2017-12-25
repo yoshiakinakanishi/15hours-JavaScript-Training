@@ -2,16 +2,16 @@ var todo = todo || {};
 todo.dom = todo.dom || {};
 todo.dom.newTodo = todo.dom.newTodo || {};
 
-(function(_) {
-	_.element = document.querySelector('.todo-title');
+(function(test) {
+	test.ele2 = document.querySelector('.todo-title');
 
-	_.clear = function() {
-		_.element.value = '';
+	test.clear = function() {
+		test.ele2.value = '';
 	};
 
-	_.getTodo = function() {
+	test.getTodo = function() {
 		return {
-			title: _.element.value,
+			title: test.ele2.value,
 			done: false
 		};
 	};

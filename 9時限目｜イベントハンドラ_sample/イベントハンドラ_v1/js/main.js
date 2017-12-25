@@ -1,9 +1,12 @@
 (function() {
-	//<input class="todo-title">要素(todo.dom.newTodo.element)のkeydownイベントに、onNewTodoKeydownを登録
-	todo.dom.newTodo.element.addEventListener('keydown', onNewTodoKeydown);
+	/*
+	<input class="todo-title">要素である(todo.dom.newTodo.ele2)の
+	keydownイベントにonNewTodoKeydownを登録 => イベントハンドラ登録
+	*/
+	todo.dom.newTodo.ele2.addEventListener('keydown', onNewTodoKeydown);
 
-	function onNewTodoKeydown(event) {
-		//以下3行をかならず追加する
+	function onNewTodoKeydown(event) { // event引数をかならず利用有無に関係なく設定する！
+		//以下の3行をかならず追加する
 		if (event.keyCode !== 13) { //キーがEnterかどうかを判定するにはevent.keyCodeで値は13とする
 			return; // イベントを何も処理せず抜ける
 		}
@@ -14,4 +17,5 @@
 	}
 
 })();
-// テキストを入力してEnter押せばリストが追加される　※編集や削除機能はまだ
+
+// テキストを入力してEnterを押せば、リストが追加される　※編集＆削除の機能はまだ

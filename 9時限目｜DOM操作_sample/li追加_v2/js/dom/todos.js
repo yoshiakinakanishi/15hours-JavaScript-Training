@@ -10,7 +10,7 @@ todo.dom.todos = todo.dom.todos || {};
 		var li = document.createElement('LI');
 		li.id = 'todo-' + todo.id;
 		li.classList.add('todo');
-		if (todo.done) { // 完了した Todo 項目の色変更に必要
+		if (todo.done) { // 完了した Todo 項目のカラー変更に必要
 			li.classList.add('todo-done');
 		}
 
@@ -51,9 +51,9 @@ todo.dom.todos = todo.dom.todos || {};
 	};
 })(todo.dom.todos);
 
-// まだイベントハンドラを登録していないのでコンソール画面のみで確認する
+// イベントハンドラの登録をしていないので、コンソール画面のみで確認する
 
 /*
-todo.dom.todos.add({id:10, title:"東城会", done:false});
-//東城会とブラウザにただしく出ていればOK
+	todo.dom.todos.add({id:10, title:"東城会メンバー", done:false});
+	//ブラウザに「東城会メンバー」と正しく出力されていればOK！
 */

@@ -18,18 +18,18 @@ todo.dom.newTodo = todo.dom.newTodo || {};
 })(todo.dom.newTodo);
 
 
-//まだイベントハンドラを登録していないのでコンソール画面のみで確認する
+//イベントハンドラの登録をしていないので、コンソール画面のみで確認する
 
 /*
-テキスト欄になにか入力する(東城会)
-console.log(todo.dom.newTodo.getTodo()); 
-// {title: "東城会", done: false}
+	テキスト欄になにか入力する(東城会)
+	console.log(todo.dom.newTodo.getTodo()); 
+	// {title: "東城会", done: false}
 */
 
 /*
-テキスト欄になにかを入力する(東城会)
-var create = todo.dom.newTodo.getTodo();
-todo.dom.todos.add(create);
-todo.dom.newTodo.clear(); 
-// テキスト欄は空となって削除され、liが追加される => Enterキーはもちろん今は無効のまま
+	テキスト欄になにかを入力する(東城会)
+	var create = todo.dom.newTodo.getTodo();
+	todo.dom.todos.add(create);
+	todo.dom.newTodo.clear(); 
+	// テキスト欄は空となって削除され、liが追加される => Enterキーはもちろん今は無効のまま
 */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="jp">
+	<meta charset="UTF-8">
+	<title>イベントハンドラ</title>
+	<link rel="stylesheet" href="css/todolist.css">
+</head>
+<body>
+<header>
+	<h1>東城会リスト</h1>
+</header>
+<div class="new-todo">
+	<input type="text" class="todo-title" placeholder="誰がいる?">
+</div>
+<div class="todo-list">
+	<ul class="todos">
+		<li class="todo todo-done" id="todo-1">
+			<input id="todo-1-checkbox" type="checkbox" checked="checked">
+			<label for="todo-1-checkbox">桐生一馬</label>
+			<div class="todo-operation">
+				<button value="edit" class="todo-operation-edit">✎</button>
+				<button value="delete" class="todo-operation-delete">×</button>
+			</div>
+		</li>
+		<li class="todo" id="todo-2">
+			<input id="todo-2-checkbox" type="checkbox">
+			<label for="todo-2-checkbox">真島吾郎</label>
+			<div class="todo-operation">
+				<button value="edit" class="todo-operation-edit">✎</button>
+				<button value="delete" class="todo-operation-delete">×</button>
+			</div>
+		</li>
+	</ul>
+</div>
+<footer>
+	<address>Copyright &copy; 龍が如く極み２</address>
+</footer>
+<script type="text/javascript" src="js/dom/todos.js"></script>
+<script type="text/javascript" src="js/dom/new-todo.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
